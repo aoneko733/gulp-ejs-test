@@ -1,0 +1,50 @@
+<% include common/_heading %>
+  <meta name="description" content="説明文">
+  <title>sample01</title>
+<% var familyName = test[0].familyName; %>
+<% var firstName = test[0].firstName; %>
+</head>
+<body>
+<main>
+  <ul id="container">
+<% for (var i in test) { %>
+    <li class="test">
+<%- test[i].familyName %><%- test[i].firstName %>
+<% if(test[i].key) { %>
+    key有り
+<% } else { %>
+    key無し
+<% } %>
+    </li>
+<% } %>
+  </ul>
+  <div id="flex-item">
+<% for (var j in flexItem) { %>
+  <div<% if(flexItem[j].bg == "red") { %> class="red"<% } else if(flexItem[j].bg == "blue") { %> class="blue"<% } %>>
+    <%= flexItem[j].item %>
+  </div>
+<% } %>
+  </div>
+  <div class="container">
+  先行するコンテンツ...
+
+    <div class="block">
+<% for (var k in tableItem) { %>
+      <div class="block__element">
+<% if(tableItem[k].link) { %>
+        <a href="<%- tableItem[k].link %>">
+<% } %>
+        <img src="<%- tableItem[k].tableImg %>" alt="">
+        <p><%= tableItem[k].tableTxt %></p>
+<% if(tableItem[k].link) { %>
+        </a>
+<% } %>
+      </div>
+<% } %>
+    </div>
+
+  後続するコンテンツ...
+  </div>
+</main>
+
+<% include common/_footer %>
