@@ -16,5 +16,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "npm": "^6.7.0"
+  },
+  "dependencies": {
+    "minimatch": "^3.0.4"
   }
 }
