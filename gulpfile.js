@@ -4,7 +4,9 @@ sass = require('gulp-sass'),
 autoprefixer = require('gulp-autoprefixer'),
 ejs = require('gulp-ejs'),
 merge = require('gulp-merge-json'),
-fs = require('fs');
+fs = require('fs'),
+minify = require('gulp-uglify'),
+rename = require('gulp-rename');
 
 
 gulp.task("sass", function() {
@@ -34,11 +36,19 @@ gulp.task("ejs", function() {
     .pipe(gulp.dest('dest/html/'));
 });
 
-gulp.task("default", ['sass',"merge",'ejs']);
+gulp.task('minify', function() {
+  gulp.src(['./src/js/*.js'])
+    .pipe(minify())
+    .pipe(rename({extname: '.min.js'}))
+    .pipe(gulp.dest('dest/js/'));
+});
+
+gulp.task("default", ['sass',"merge",'ejs','minify']);
 
 gulp.task("watch", function() {
   gulp.watch("src/ejs/*.ejs",["ejs"]);
   gulp.watch("src/ejs/common/*.ejs",["ejs"]);
   gulp.watch("src/ejs/template/*.ejs",["ejs"]);
   gulp.watch("src/scss/*.scss",["sass"]);
+  gulp.watch("src/js/*.js",["minify"]);
 });

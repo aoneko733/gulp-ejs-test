@@ -1,74 +1,89 @@
+@charset "UTF-8";
 @import url("./reset.css");
-#flex-item {
-  border: 1px solid #ccc;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+body,
+html {
+  font-size: 10px;
+  height: 100%;
   margin: 0 auto;
-  padding: 10px 10px 0;
-  width: 700px;
+  letter-spacing: 2px;
 }
 
-#flex-item > div {
+/*固定する背景*/
+div {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid #ccc;
+  color: #fff;
+  font-size: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
+  height: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 10px;
-  width: calc((100% - 30px) / 4);
+  padding: 5%;
 }
 
-#flex-item > div + div {
-  margin-left: 10px;
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  min-height: 500px;
 }
 
-#flex-item > div:nth-child(4n+1) {
-  margin-left: 0;
+/*各背景の画像*/
+.img-bg-01 {
+  background-image: url("../img/photo1.jpg");
 }
 
-#flex-item > div.red {
-  background-color: red;
-  border: 0;
-  color: #fff;
+.img-bg-02 {
+  background-image: url("../img/photo2.jpg");
 }
 
-#flex-item > div.blue {
-  background-color: #00f;
-  border: 0;
-  color: #fff;
+.img-bg-03 {
+  background-image: url("../img/photo3.jpg");
 }
 
-.container {
-  margin: 0 auto;
-  width: 700px;
+.img-bg-04 {
+  background-image: url("../img/photo4.jpg");
 }
 
-.block {
-  display: table;
-  margin: 20px 0;
-  table-layout: fixed;
+.img-bg-05 {
+  background-image: url("../img/photo5.jpg");
 }
 
-.block .block__element {
-  border: 1px solid #666;
-  display: table-cell;
-  padding: 9px;
+.img-bg-06 {
+  background-image: url("../img/photo6.jpg");
 }
 
-.block .block__element img {
-  height: auto;
-  width: 250px;
+/*スクロールするコンテンツ*/
+.scrollbox {
+  min-height: 500px;
 }
 
-.block .block__element:hover {
-  background: #dd3;
+.scrollbox1 {
+  background-color: #ddd;
+}
+
+.scrollbox2 {
+  background-color: #eee;
+}
+
+.scrollbox3 {
+  background-color: #ccc;
+}
+
+.scrollbox4 {
+  background-color: #bbb;
+}
+
+.scrollbox5 {
+  background-color: #aaa;
+}
+
+.scrollbox6 {
+  background-color: #333;
 }
