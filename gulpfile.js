@@ -3,7 +3,6 @@ var gulp = require('gulp'),
 sass = require('gulp-sass'),
 autoprefixer = require('gulp-autoprefixer'),
 ejs = require('gulp-ejs'),
-merge = require('gulp-merge-json'),
 fs = require('fs');
 
 
@@ -19,23 +18,14 @@ gulp.task("sass", function() {
     .pipe(gulp.dest('dest/css/'));
 });
 
-gulp.task("merge", function(){
-  return gulp.src('./src/data/_*.json')
-    .pipe(merge({
-      fileName: 'samples.json'
-    }))
-    .pipe(gulp.dest('./src/data/'));
-});
-
 gulp.task("ejs", function() {
-  var json = JSON.parse(fs.readFileSync('./src/data/samples.json'));
+  var json = JSON.parse(fs.readFileSync('./src/data/sample01.json'));
   return gulp.src('./src/ejs/*.ejs')
     .pipe(ejs(json,{},{"ext": ".html"}))
     .pipe(gulp.dest('dest/html/'));
 });
 
-
-gulp.task("default", ['sass',"merge",'ejs']);
+gulp.task("default", ['sass','ejs']);
 
 gulp.task("watch", function() {
   gulp.watch("src/ejs/*.ejs",["ejs"]);
