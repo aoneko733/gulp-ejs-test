@@ -13,16 +13,15 @@ div {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #fff;
   font-size: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 5%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .parallax-bg {
@@ -30,13 +29,18 @@ div {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0;
-  min-height: 500px;
+  color: #fff;
 }
 
 /*各背景の画像*/
-.img-bg-01 {
-  background-image: url("../img/photo1.jpg");
+.img-bg-01 video {
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: -10;
 }
 
 .img-bg-02 {
@@ -61,7 +65,18 @@ div {
 
 /*スクロールするコンテンツ*/
 .scrollbox {
+  background-color: #fff;
   min-height: 500px;
+}
+
+.scrollbox__inner {
+  padding: 5%;
+  position: relative;
+  top: 0;
+  left: -100%;
+  -webkit-transition: all 300ms 0s ease;
+  transition: all 300ms 0s ease;
+  width: 100%;
 }
 
 .scrollbox1 {
@@ -86,4 +101,9 @@ div {
 
 .scrollbox6 {
   background-color: #333;
+}
+
+.show {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
 }

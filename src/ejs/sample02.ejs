@@ -7,11 +7,20 @@
 <body>
   <main>
 <% for (var i = 1; i <= 6; i++) { %>
-    <div class="scrollbox scrollbox<%= i %>">
-      スクロールコンテンツ<%= i %>
-    </div>
+    <% if(i == 1) { %>
     <div class="parallax-bg img-bg-0<%= i %>">
       <p class="bg-txt">固定背景<%= i %></p>
+      <video src="../img/movie01.mp4" poster="" autoplay loop muted></video>
+    </div>
+    <% } else { %>
+    <div class="parallax-bg img-bg-0<%= i %>">
+      <p class="bg-txt">固定背景<%= i %></p>
+    </div>
+    <% } %>
+    <div class="scrollbox">
+      <div class="scrollbox__inner scrollbox<%= i %>">
+        スクロールコンテンツ<%= i %>
+      </div>
     </div>
 <% } %>
   </main>
