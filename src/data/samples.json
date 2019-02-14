@@ -1,0 +1,106 @@
+{
+	"test": [
+		{
+			"familyName": "波岡",
+			"firstName": "龍太",
+			"key": "hogehoges"
+		},
+		{
+			"familyName": "山田",
+			"firstName": "太郎",
+			"key": {}
+		},
+		{
+			"familyName": "田中",
+			"firstName": "一郎"
+		}
+	],
+	"flexItem": [
+		{
+			"item": "item1",
+			"bg": "red"
+		},
+		{
+			"item": "item2",
+			"bg": "blue"
+		},
+		{
+			"item": "item3"
+		},
+		{
+			"item": "item4"
+		},
+		{
+			"item": "item5"
+		},
+		{
+			"item": "item6"
+		},
+		{
+			"item": "item7"
+		},
+		{
+			"item": "item8",
+			"bg": "red"
+		},
+		{
+			"item": "item9"
+		},
+		{
+			"item": "item10"
+		},
+		{
+			"item": "item11",
+			"bg": "blue"
+		}
+	],
+	"tableItem": [
+		{
+			"tableImg": "../../img/img_01.jpg",
+			"tableTxt": "ここはリンクじゃないよ"
+		},
+		{
+			"link": "http://www.aaa.html",
+			"tableImg": "../../img/img_02.jpg",
+			"tableTxt": "内容が少ないリンク"
+		},
+		{
+			"link": "http://www.bbb.html",
+			"tableImg": "../../img/img_03.jpg",
+			"tableTxt": "内容が多いリンク内容が多いリンク内容が多いリンク内容が多いリンク"
+		}
+	],
+	"godardData": [
+		{
+			"movie": true,
+			"bgClassName": " img-bg-01",
+			"bgTxt": "動画背景",
+			"contsClassName": " scrollbox1"
+		},
+		{
+			"bgClassName": " img-bg-02",
+			"bgTxt": "固定背景1",
+			"contsClassName": " scrollbox2"
+		},
+		{
+			"bgClassName": " img-bg-03",
+			"bgTxt": "固定背景2",
+			"contsClassName": " scrollbox3"
+		},
+		{
+			"bgClassName": " img-bg-04",
+			"bgTxt": "固定背景3",
+			"contsClassName": " scrollbox4"
+		},
+		{
+			"bgClassName": " img-bg-05",
+			"bgTxt": "固定背景4",
+			"contsClassName": " scrollbox5"
+		},
+		{
+			"bgClassName": " img-bg-06",
+			"bgTxt": "固定背景5",
+			"contsClassName": " scrollbox6"
+		}
+	]
+}
