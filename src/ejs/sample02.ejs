@@ -1,25 +1,20 @@
 <% include common/_heading %>
-<meta name="description" content="説明文">
 <title>sample02</title>
 <link rel="stylesheet" href="../css/sample02.css">
 </head>
 
 <body>
   <main>
-<% for (var i = 1; i <= 6; i++) { %>
-    <% if(i == 1) { %>
-    <div class="parallax-bg img-bg-0<%= i %>">
-      <p class="bg-txt">固定背景<%= i %></p>
+<% for (var i in godardData) { %>
+    <div class="parallax-bg<%= godardData[i].bgClassName %>">
+      <p class="bg-txt"><%= godardData[i].bgTxt %></p>
+<% if(godardData[i].movie) { %>
       <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
+<% } %>
     </div>
-    <% } else { %>
-    <div class="parallax-bg img-bg-0<%= i %>">
-      <p class="bg-txt">固定背景<%= i %></p>
-    </div>
-    <% } %>
     <div class="scrollbox">
-      <div class="scrollbox__inner scrollbox<%= i %>">
-        スクロールコンテンツ<%= i %>
+      <div class="scrollbox__inner<%= godardData[i].contsClassName %>">
+        スクロールコンテンツ
       </div>
     </div>
 <% } %>
