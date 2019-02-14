@@ -6,13 +6,13 @@
 			"key": "hogehoges"
 		},
 		{
-			"familyName": "宮下",
-			"firstName": "茜",
+			"familyName": "山田",
+			"firstName": "太郎",
 			"key": {}
 		},
 		{
-			"familyName": "波岡",
-			"firstName": "茜"
+			"familyName": "田中",
+			"firstName": "一郎"
 		}
 	],
 	"flexItem": [
@@ -68,6 +68,39 @@
 			"link": "http://www.bbb.html",
 			"tableImg": "../../img/img_03.jpg",
 			"tableTxt": "内容が多いリンク内容が多いリンク内容が多いリンク内容が多いリンク"
+		}
+	],
+	"godardData": [
+		{
+			"movie": true,
+			"bgClassName": " img-bg-01",
+			"bgTxt": "動画背景",
+			"contsClassName": " scrollbox1"
+		},
+		{
+			"bgClassName": " img-bg-02",
+			"bgTxt": "固定背景1",
+			"contsClassName": " scrollbox2"
+		},
+		{
+			"bgClassName": " img-bg-03",
+			"bgTxt": "固定背景2",
+			"contsClassName": " scrollbox3"
+		},
+		{
+			"bgClassName": " img-bg-04",
+			"bgTxt": "固定背景3",
+			"contsClassName": " scrollbox4"
+		},
+		{
+			"bgClassName": " img-bg-05",
+			"bgTxt": "固定背景4",
+			"contsClassName": " scrollbox5"
+		},
+		{
+			"bgClassName": " img-bg-06",
+			"bgTxt": "固定背景5",
+			"contsClassName": " scrollbox6"
 		}
 	]
 }
