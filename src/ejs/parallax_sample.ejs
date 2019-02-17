@@ -56,8 +56,9 @@
       font-weight: bold;
       height: 500px;
       width: 100%;
+      position: relative;
       opacity: 0;
-      /*transform: translate(0, 50px);*/
+      transform: translate(-200%, 0);
       transition: all ease 1000ms;
     }
 
@@ -67,7 +68,7 @@
 
     li.scrollin {
       opacity: 1;
-      /*transform: translate(0, 0);*/
+      transform: translate(0, 0);
     }
     @media screen and (max-width:480px) {
       #container {
@@ -100,7 +101,7 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   <script>
     $(function() {
-      $(window).scroll(function() {
+      $(window).on('scroll', function() {
         $('li').each(function() {
           var obj_t_pos = $(this).offset().top;
           var scr_count = $(document).scrollTop();

@@ -1,5 +1,5 @@
-@charset "UTF-8";
 @import url("./reset.css");
+
 body,
 html {
   font-size: 10px;
@@ -7,40 +7,63 @@ html {
   margin: 0 auto;
   letter-spacing: 2px;
 }
-
 /*固定する背景*/
+#index {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  p {
+    color: #fff;
+  }
+  &__body {
+    display: block;
+    margin-top: 100px;
+  }
+}
+
 div {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-size: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
 }
 
 .parallax-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: {
+    attachment: fixed;
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
   color: #fff;
 }
-
 /*各背景の画像*/
-.img-bg-01 video {
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  z-index: -10;
+.img-bg-01 {
+  & > .bg-txt {
+    font: {
+      family: 'Open Sans', sans-serif;
+      size: 140px;
+    }
+    line-height: 1.2;
+    opacity: 0.8;
+    text-align: right;
+    width: 900px;
+  }
+  video {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: -10;
+  }
 }
 
 .img-bg-02 {
@@ -62,7 +85,6 @@ div {
 .img-bg-06 {
   background-image: url("../img/photo6.jpg");
 }
-
 /*スクロールするコンテンツ*/
 .scrollbox {
   background-color: #333;
@@ -70,22 +92,17 @@ div {
 }
 
 .scrollbox__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 0;
   padding: 5%;
   position: relative;
-  -webkit-transform: translate(-200%, 0);
   transform: translate(-200%, 0);
-  -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
   width: 100%;
 }
 
 .scrollin {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
@@ -114,6 +131,5 @@ div {
 }
 
 .show {
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }

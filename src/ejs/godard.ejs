@@ -1,0 +1,58 @@
+<% include common/_heading %>
+<title>sample02</title>
+<link rel="stylesheet" href="../css/godard.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+</head>
+
+<body>
+  <div id="index">
+    <div id="index__body">
+      <p>
+        <span class="letter13">U</span>
+        <span class="letter9">n</span>
+        <span class="letter6">i</span>
+        <span class="letter14">v</span>
+        <span class="letter4">e</span>
+        <span class="letter11">r</span>
+        <span class="letter12">s</span>
+      </p>
+      <p>
+        <span class="letter3">d</span>
+        <span class="letter4">e</span>
+      </p>
+      <p>
+        <span class="letter7">J</span>
+        <span class="letter4">e</span>
+        <span class="letter1">a</span>
+        <span class="letter9">n</span>
+        <span class="letter8">-&nbsp;L</span>
+        <span class="letter13">u</span>
+        <span class="letter2">c</span>
+        <span>&nbsp;</span>
+        <span class="letter5">G</span>
+        <span class="letter10">o</span>
+        <span class="letter3">d</span>
+        <span class="letter1">a</span>
+        <span class="letter11">r</span>
+        <span class="letter3">d</span>
+      </p>
+      <p>allons-y, Alonzo</p>
+    </div>
+  </div>
+  <main>
+<% for (var i in godardData) { %>
+    <div class="parallax-bg<%= godardData[i].bgClassName %>">
+      <p class="bg-txt"><%= godardData[i].bgTxt %></p>
+<% if(godardData[i].movie) { %>
+      <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
+<% } %>
+    </div>
+    <div class="scrollbox">
+      <div class="scrollbox__inner<%= godardData[i].contsClassName %>">
+        スクロールコンテンツ
+      </div>
+    </div>
+<% } %>
+  </main>
+<script src="../js/godard.min.js" charset="utf-8"></script>
+  <% include common/_footer %>
