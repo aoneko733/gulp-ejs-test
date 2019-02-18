@@ -1,11 +1,15 @@
 <% include common/_heading %>
-<title>sample02</title>
+<title>Univers de Jean-Luc Godard</title>
 <link rel="stylesheet" href="../css/godard.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 <body>
   <div id="index">
+    <div id="skip">
+      <a href="#main">skip &gt;</a>
+    </div>
     <div id="index__body">
       <p>
         <span class="letter13">U</span>
@@ -36,10 +40,31 @@
         <span class="letter11">r</span>
         <span class="letter3">d</span>
       </p>
-      <p>allons-y, Alonzo</p>
+      <a id="enter-btn" href="#main">
+        allons-y, Alonzo &gt;
+      </a>
     </div>
   </div>
-  <main>
+  <main id="main">
+    <header>
+      <ul>
+        <li>
+          <a href="#article01">aaa</a>
+        </li>
+        <li>
+          <a href="#article02">aaa</a>
+        </li>
+        <li>
+          <a href="#article03">aaa</a>
+        </li>
+        <li>
+          <a href="#article04">aaa</a>
+        </li>
+        <li>
+          <a href="#article05">aaa</a>
+        </li>
+      </ul>
+    </header>
 <% for (var i in godardData) { %>
     <div class="parallax-bg<%= godardData[i].bgClassName %>">
       <p class="bg-txt"><%= godardData[i].bgTxt %></p>
@@ -47,9 +72,9 @@
       <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
 <% } %>
     </div>
-    <div class="scrollbox">
+    <div class="scrollbox" id="<%= godardData[i].contsId %>">
       <div class="scrollbox__inner<%= godardData[i].contsClassName %>">
-        スクロールコンテンツ
+        <%= godardData[i].contsTxt %>
       </div>
     </div>
 <% } %>

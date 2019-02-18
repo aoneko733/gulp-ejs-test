@@ -8,9 +8,14 @@ html {
   letter-spacing: 2px;
 }
 
-/*固定する背景*/
+body {
+  overflow: hidden;
+}
+
+/*初期画面*/
 #index {
   background-color: #000;
+  display: table;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,11 +28,77 @@ html {
   color: #fff;
 }
 
-#index__body {
-  display: block;
-  margin-top: 100px;
+#index p span {
+  font-family: 'Lato', sans-serif;
+  opacity: 0;
 }
 
+#index p span.showLet {
+  opacity: 1;
+}
+
+#index__body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#index #skip a {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  text-decoration: underline;
+}
+
+#index #enter-btn {
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  font-size: 30px;
+  margin: 50px auto 0;
+  opacity: 0;
+  padding: 10px;
+  width: 500px;
+}
+
+#index #enter-btn:hover {
+  background: rgba(204, 204, 204, 0.5);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+header ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header ul li {
+  background: rgba(204, 204, 204, 0.3);
+  float: left;
+  font-size: 20px;
+  padding: 5px 0;
+  text-align: center;
+  width: 20%;
+}
+
+header ul li + li {
+  border-left: 1px solid #fff;
+}
+
+header ul li > a {
+  color: #fff;
+}
+
+/*固定する背景*/
 div {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -85,10 +156,6 @@ div {
 
 .img-bg-05 {
   background-image: url("../img/photo5.jpg");
-}
-
-.img-bg-06 {
-  background-image: url("../img/photo6.jpg");
 }
 
 /*スクロールするコンテンツ*/
