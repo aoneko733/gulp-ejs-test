@@ -3,35 +3,35 @@
     {
       "movie": true,
       "bgClassName": " img-bg-01",
-      "bgTxt": "Univers de Jean-Luc Godard",
+      "bgTxt": "L'univers de Jean-Luc Godard",
       "contsId": "article01",
       "contsClassName": " scrollbox1",
       "contsTxt": "ああああああああああああああ"
     },
     {
       "bgClassName": " img-bg-02",
-      "bgTxt": "固定背景1",
+      "bgTxt": "ヌーベルヴァーグ",
       "contsId": "article02",
       "contsClassName": " scrollbox2",
       "contsTxt": "いいいいいいいいいいいいいい"
     },
     {
       "bgClassName": " img-bg-03",
-      "bgTxt": "固定背景2",
+      "bgTxt": "ゴダールのその時代",
       "contsId": "article03",
       "contsClassName": " scrollbox3",
       "contsTxt":"ううううううううううううううう"
     },
     {
       "bgClassName": " img-bg-04",
-      "bgTxt": "固定背景3",
+      "bgTxt": "ゴダールと女たち",
       "contsId": "article04",
       "contsClassName": " scrollbox4",
       "contsTxt":"ええええええええええええええ"
     },
     {
       "bgClassName": " img-bg-05",
-      "bgTxt": "固定背景4",
+      "bgTxt": "フィルモグラフィー",
       "contsId": "article05",
       "contsClassName": " scrollbox5",
       "contsTxt":"おおおおおおおおおおおおおおお"
