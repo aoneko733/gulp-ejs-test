@@ -12,10 +12,15 @@ body {
   overflow: hidden;
 }
 
+.sp-show {
+  display: none;
+}
+
 /*初期画面*/
 #index {
   background-color: #000;
   display: table;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,6 +35,7 @@ body {
 
 #index p span {
   font-family: 'Lato', sans-serif;
+  font-size: 50px;
   opacity: 0;
 }
 
@@ -37,18 +43,33 @@ body {
   opacity: 1;
 }
 
+#index p span + span {
+  margin-left: 10px;
+}
+
+#index p.blue {
+  color: #03f;
+}
+
+#index p.red {
+  color: #f00;
+}
+
 #index__body {
   display: table-cell;
   vertical-align: middle;
+}
+
+#index #skip {
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 #index #skip a {
   color: #fff;
   display: block;
   font-size: 20px;
-  position: absolute;
-  top: 50px;
-  right: 50px;
   text-decoration: underline;
 }
 
@@ -67,12 +88,8 @@ body {
   background: rgba(204, 204, 204, 0.5);
 }
 
-#index p.blue {
-  color: #03f;
-}
-
-#index p.red {
-  color: #f00;
+#main {
+  height: 100%;
 }
 
 header {
@@ -107,7 +124,7 @@ header ul li > a {
 }
 
 /*固定する背景*/
-div {
+.parallax-bg {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -115,14 +132,11 @@ div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 100vh;
   overflow: hidden;
-}
-
-.parallax-bg {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -169,13 +183,15 @@ div {
 /*スクロールするコンテンツ*/
 .scrollbox {
   background-color: #333;
-  min-height: 500px;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .scrollbox__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   opacity: 0;
   padding: 5%;
   position: relative;
@@ -219,4 +235,50 @@ div {
 .show {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+}
+
+@media screen and (max-width: 750px) {
+  .sp-hide {
+    display: none;
+  }
+  .sp-show {
+    display: inline;
+  }
+  #index {
+    padding: 0 10px;
+  }
+  #index__body {
+    width: 100%;
+  }
+  #index #enter-btn {
+    font-size: 20px;
+    margin-top: 30px;
+    width: 90%;
+  }
+  #index p span {
+    font-size: 35px;
+  }
+  #index #skip {
+    top: 20px;
+    right: 20px;
+  }
+  .parallax-bg {
+    font-size: 30px;
+  }
+  .img-bg-01 > .bg-txt {
+    font-size: 60px;
+    line-height: 1.2;
+    width: 90%;
+  }
+  .img-bg-01 video {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 750px) and (orientation: landscape) {
+  .img-bg-01 video {
+    height: auto;
+    width: 100%;
+  }
 }

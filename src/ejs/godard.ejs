@@ -33,7 +33,8 @@
         <span class="letter8">-&nbsp;L</span>
         <span class="letter13">U</span>
         <span class="letter2">C</span>
-        <span>&nbsp;</span>
+        <span class="sp-hide">&nbsp;</span>
+        <span class="sp-show"><br></span>
         <span class="letter5">G</span>
         <span class="letter10">O</span>
         <span class="letter3">D</span>
@@ -70,7 +71,7 @@
       </ul>
     </header>
 <% for (var i in godardData) { %>
-    <div class="parallax-bg<%= godardData[i].bgClassName %>" id="top">
+    <div class="parallax-bg parallax-bg<%= godardData[i].bgClassName %>" id="top">
       <p class="bg-txt"><%= godardData[i].bgTxt %></p>
 <% if(godardData[i].movie) { %>
       <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
