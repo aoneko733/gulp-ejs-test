@@ -2,7 +2,6 @@
 @import url("./reset.css");
 body,
 html {
-  font-size: 10px;
   height: 100%;
   margin: 0 auto;
   letter-spacing: 2px;
@@ -16,6 +15,26 @@ body {
   display: none;
 }
 
+#loading {
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#container {
+  display: none;
+  height: 100%;
+}
+
 /*初期画面*/
 #index {
   background-color: #000;
@@ -25,6 +44,8 @@ body {
   top: 0;
   left: 0;
   text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 10;
 }
@@ -37,10 +58,6 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 50px;
   opacity: 0;
-}
-
-#index p span.showLet {
-  opacity: 1;
 }
 
 #index p span + span {
@@ -58,6 +75,10 @@ body {
 #index__body {
   display: table-cell;
   vertical-align: middle;
+}
+
+#index__body > p + p {
+  margin-top: 20px;
 }
 
 #index #skip {
@@ -88,6 +109,7 @@ body {
   background: rgba(204, 204, 204, 0.5);
 }
 
+/* コンテンツ */
 #main {
   height: 100%;
 }
@@ -96,6 +118,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 2;
 }
@@ -112,7 +136,7 @@ header ul li {
   font-size: 20px;
   padding: 5px 0;
   text-align: center;
-  width: calc(100% / 6);
+  width: 16.666%;
 }
 
 header ul li + li {
@@ -160,24 +184,26 @@ header ul li > a {
   top: 0;
   left: 0;
   text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: -10;
 }
 
 .img-bg-02 {
-  background-image: url("../img/photo2.jpg");
+  background-image: url("../img/photo1.jpg");
 }
 
 .img-bg-03 {
-  background-image: url("../img/photo3.jpg");
+  background-image: url("../img/photo2.jpg");
 }
 
 .img-bg-04 {
-  background-image: url("../img/photo4.jpg");
+  background-image: url("../img/photo3.jpg");
 }
 
 .img-bg-05 {
-  background-image: url("../img/photo5.jpg");
+  background-image: url("../img/photo4.jpg");
 }
 
 /*スクロールするコンテンツ*/
@@ -237,7 +263,7 @@ header ul li > a {
   transform: translateX(100%);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 812px) {
   .sp-hide {
     display: none;
   }
@@ -253,7 +279,9 @@ header ul li > a {
   #index #enter-btn {
     font-size: 20px;
     margin-top: 30px;
-    width: 90%;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: auto;
   }
   #index p span {
     font-size: 35px;
@@ -276,9 +304,16 @@ header ul li > a {
   }
 }
 
-@media screen and (max-width: 750px) and (orientation: landscape) {
+@media screen and (max-width: 812px) and (orientation: landscape) {
   .img-bg-01 video {
     height: auto;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .img-bg-01 video {
+    height: 100%;
+    width: auto;
   }
 }

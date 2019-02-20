@@ -1,65 +1,3 @@
-function showLetter1() {
-  $('.letter1').addClass('showLet');
-}
-
-function showLetter2() {
-  $('.letter2').addClass('showLet');
-}
-
-function showLetter3() {
-  $('.letter3').addClass('showLet');
-}
-
-function showLetter4() {
-  $('.letter4').addClass('showLet');
-}
-
-function showLetter5() {
-  $('.letter5').addClass('showLet');
-}
-
-function showLetter6() {
-  $('.letter6').addClass('showLet');
-}
-
-function showLetter7() {
-  $('.letter7').addClass('showLet');
-}
-
-function showLetter8() {
-  $('.letter8').addClass('showLet');
-}
-
-function showLetter9() {
-  $('.letter9').addClass('showLet');
-}
-
-function showLetter10() {
-  $('.letter10').addClass('showLet');
-}
-
-function showLetter11() {
-  $('.letter11').addClass('showLet');
-}
-
-function showLetter12() {
-  $('.letter12').addClass('showLet');
-}
-
-function showLetter13() {
-  $('.letter13').addClass('showLet');
-}
-
-function showLetter14() {
-  $('.letter14').addClass('showLet');
-}
-
-function showEnter() {
-  $('#enter-btn').animate({
-    opacity: "1"
-  }, 1000);
-}
-
 function returnToTop() {
   $('body, html').animate({
     scrollTop: 0
@@ -67,31 +5,14 @@ function returnToTop() {
   return false;
 }
 $(function() {
-  /*オープニングのアニメーション*/
+  /*indexからenter時の処理*/
   $(window).on('load', function() {
     returnToTop();
-    var basicNum = 500;
-    setTimeout('showLetter1()', basicNum * 1);
-    setTimeout('showLetter2()', basicNum * 2);
-    setTimeout('showLetter3()', basicNum * 3);
-    setTimeout('showLetter4()', basicNum * 4);
-    setTimeout('showLetter5()', basicNum * 5);
-    setTimeout('showLetter6()', basicNum * 6);
-    setTimeout('showLetter7()', basicNum * 7);
-    setTimeout('showLetter8()', basicNum * 8);
-    setTimeout('showLetter9()', basicNum * 9);
-    setTimeout('showLetter10()', basicNum * 10);
-    setTimeout('showLetter11()', basicNum * 11);
-    setTimeout('showLetter12()', basicNum * 12);
-    setTimeout('showLetter13()', basicNum * 13);
-    setTimeout('showLetter14()', basicNum * 14);
-    setTimeout('showEnter()', basicNum * 15);
+    $("#loading").fadeOut();
+    $("#container").show();
   });
-
   $('#skip a, #enter-btn').click(function() {
-    $('#index').css({
-      position: 'static'
-    }).fadeOut(500);
+    $('#index').fadeOut(500);
     $('body').css('overflow', 'auto');
   });
   /*スクロール時コンテンツの横スライド*/

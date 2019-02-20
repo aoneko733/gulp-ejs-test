@@ -10,7 +10,6 @@
 
 body,
 html {
-  font-size: 10px;
   height: 100%;
   margin: 0 auto;
   letter-spacing: 2px;
@@ -24,6 +23,22 @@ body {
   display: none;
 }
 
+#loading {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#container {
+  display: none;
+  height: 100%;
+}
+
 /*初期画面*/
 #index {
   background-color: #000;
@@ -33,6 +48,7 @@ body {
   top: 0;
   left: 0;
   text-align: center;
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 10;
   p {
@@ -43,9 +59,6 @@ body {
         size: 50px;
       }
       opacity: 0;
-      &.showLet {
-        opacity: 1;
-      }
       & + span {
         margin-left: 10px;
       }
@@ -60,6 +73,11 @@ body {
   &__body {
     display: table-cell;
     vertical-align: middle;
+    & > p {
+      & + p {
+        margin-top: 20px;
+      }
+    }
   }
   #skip {
     position: absolute;
@@ -86,6 +104,8 @@ body {
     }
   }
 }
+
+/* コンテンツ */
  #main {
    height: 100%;
  }
@@ -93,6 +113,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 2;
   ul {
@@ -103,7 +124,7 @@ header {
       font-size: 20px;
       padding: 5px 0;
       text-align: center;
-      width: calc(100% / 6);
+      width: 16.666%;
       & + li {
         border-left: 1px solid #fff;
       }
@@ -149,25 +170,26 @@ header {
     top: 0;
     left: 0;
     text-align: center;
+    transform: translate3d(0, 0, 0);
     width: 100%;
     z-index: -10;
   }
 }
 
 .img-bg-02 {
-  background-image: url("../img/photo2.jpg");
+  background-image: url("../img/photo1.jpg");
 }
 
 .img-bg-03 {
-  background-image: url("../img/photo3.jpg");
+  background-image: url("../img/photo2.jpg");
 }
 
 .img-bg-04 {
-  background-image: url("../img/photo4.jpg");
+  background-image: url("../img/photo3.jpg");
 }
 
 .img-bg-05 {
-  background-image: url("../img/photo5.jpg");
+  background-image: url("../img/photo4.jpg");
 }
 
 /*スクロールするコンテンツ*/
@@ -221,7 +243,7 @@ header {
   transform: translateX(100%);
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:812px) {
   .sp-hide {
     display: none;
   }
@@ -236,7 +258,11 @@ header {
     #enter-btn {
       font-size: 20px;
       margin-top: 30px;
-      width: 90%;
+      padding: {
+        right: 20px;
+        left: 20px;
+      }
+      width: auto;
     }
     p {
       span {
@@ -270,6 +296,15 @@ header {
         height: auto;
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width:1024px) and (orientation: portrait) {
+  .img-bg-01 {
+    video {
+      height: 100%;
+      width: auto;
     }
   }
 }
