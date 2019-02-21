@@ -1,40 +1,29 @@
 {
   "godardData":[
     {
-      "movie": true,
-      "bgClassName": " img-bg-01",
-      "bgTxt": "L'univers de Jean-Luc Godard",
+      "articleTitle": "僕がJLGについて知っている二、三の事柄",
       "contsId": "article01",
-      "contsClassName": " scrollbox1",
-      "contsTxt": "ああああああああああああああ"
+      "contsTxt": "あああああああああああああああああああああ"
     },
     {
-      "bgClassName": " img-bg-02",
-      "bgTxt": "ヌーベルヴァーグ",
+      "articleTitle": "ヌーベルヴァーグ",
       "contsId": "article02",
-      "contsClassName": " scrollbox2",
-      "contsTxt": "いいいいいいいいいいいいいい"
+      "contsTxt": "あああああああああああああああああああああ"
     },
     {
-      "bgClassName": " img-bg-03",
-      "bgTxt": "ゴダールのその時代",
+      "articleTitle": "ゴダールのその時代",
       "contsId": "article03",
-      "contsClassName": " scrollbox3",
-      "contsTxt":"ううううううううううううううう"
+      "contsTxt":"いいいいいいいいいいいいいいいいい"
     },
     {
-      "bgClassName": " img-bg-04",
-      "bgTxt": "ゴダールと女たち",
+      "articleTitle": "ゴダールと女たち",
       "contsId": "article04",
-      "contsClassName": " scrollbox4",
-      "contsTxt":"ええええええええええええええ"
+      "contsTxt":"ううううううううううううううううううう"
     },
     {
-      "bgClassName": " img-bg-05",
-      "bgTxt": "フィルモグラフィー",
+      "articleTitle": "フィルモグラフィー",
       "contsId": "article05",
-      "contsClassName": " scrollbox5",
-      "contsTxt":"おおおおおおおおおおおおおおお"
+      "contsTxt":"えええええええええええええええええええ"
     }
   ]
 }

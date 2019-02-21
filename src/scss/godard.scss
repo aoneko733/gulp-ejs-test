@@ -1,5 +1,4 @@
 @import url("./reset.css");
-
 @mixin clearfix {
   &:after {
     content: "";
@@ -38,8 +37,8 @@ body {
   display: none;
   height: 100%;
 }
-
 /*初期画面*/
+
 #index {
   background-color: #000;
   display: table;
@@ -51,38 +50,47 @@ body {
   transform: translate3d(0, 0, 0);
   width: 100%;
   z-index: 10;
+
   p {
     color: #fff;
+
     span {
       font: {
         family: 'Lato', sans-serif;
         size: 50px;
       }
       opacity: 0;
+
       & + span {
         margin-left: 10px;
       }
     }
+
     &.blue {
       color: #03f;
     }
+
     &.red {
       color: #f00;
     }
   }
+
   &__body {
     display: table-cell;
     vertical-align: middle;
+
     & > p {
       & + p {
         margin-top: 20px;
       }
     }
   }
+
   #skip {
     position: absolute;
     top: 50px;
     right: 50px;
+
     a {
       color: #fff;
       display: block;
@@ -90,6 +98,7 @@ body {
       text-decoration: underline;
     }
   }
+
   #enter-btn {
     border: 1px solid #fff;
     color: #fff;
@@ -99,71 +108,66 @@ body {
     opacity: 0;
     padding: 10px;
     width: 400px;
+
     &:hover {
       background: rgba(204, 204, 204, 0.5);
     }
   }
 }
-
 /* コンテンツ */
- #main {
-   height: 100%;
- }
+#main,
+#contents {
+  height: 100%;
+}
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   transform: translate3d(0, 0, 0);
   width: 100%;
-  z-index: 2;
+  z-index: 5;
+
   ul {
     @include clearfix;
+
     li {
-      background: rgba(204, 204, 204, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       float: left;
       font-size: 20px;
       padding: 5px 0;
       text-align: center;
       width: 16.666%;
+
       & + li {
         border-left: 1px solid #fff;
       }
+
       & > a {
         color: #fff;
-       }
+      }
     }
   }
 }
+/*top*/
 
-/*固定する背景*/
-
-.parallax-bg {
-  align-items: center;
-  font-size: 5rem;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  overflow: hidden;
-  background: {
-    attachment: fixed;
-    position: center;
-    size: cover;
-    repeat: no-repeat;
-  }
-  color: #fff;
-}
-/*各背景の画像*/
-.img-bg-01 {
-  & > .bg-txt {
+#top {
+  h1 {
+    color: #fff;
     font: {
       family: 'Open Sans', sans-serif;
       size: 120px;
     }
     line-height: 1.2;
-    opacity: 0.7;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     text-align: right;
-    width: 900px;
+    transform: translate(-50%, -50%);
+    width: 750px;
   }
+
   video {
     height: auto;
     position: fixed;
@@ -175,86 +179,98 @@ header {
     z-index: -10;
   }
 }
+/* content */
 
-.img-bg-02 {
+.content {
+  background: {
+    attachment: fixed;
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  height: 100%;
+  min-height: 100vh;
+  &__inner {
+    background: linear-gradient(-225deg, rgba(255, 187, 0, 0.2) 10%, rgba(255, 83, 76,0.3) 80%);
+    color: #fff;
+    height: 100%;
+    opacity: 0;
+    padding: 60px 20px 20px;
+    position: relative;
+    transform: translate(-200%, 0);
+    transition: all ease 500ms;
+    width: 100%;
+    h2 {
+      border-bottom: 1px solid #fff;
+      font: {
+        size: 35px;
+        weight: bold;
+      }
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      span {
+        display: block;
+        padding-left: 10px;
+        position: relative;
+        left: -100%;
+        transition: all ease 1000ms;
+      }
+    }
+    article {
+      background: rgba(255,255,255,0.4);
+      border-radius: 10px;
+      color: #222;
+      font-size: 18px;
+      margin-top: 30px;
+      padding: 20px;
+    }
+  }
+}
+
+#article01 {
   background-image: url("../img/photo1.jpg");
 }
 
-.img-bg-03 {
+#article02 {
   background-image: url("../img/photo2.jpg");
 }
 
-.img-bg-04 {
+#article03 {
   background-image: url("../img/photo3.jpg");
 }
 
-.img-bg-05 {
+#article04 {
   background-image: url("../img/photo4.jpg");
 }
 
+#article05 {
+  background-image: url("../img/photo5.jpg");
+}
 /*スクロールするコンテンツ*/
-.scrollbox {
-  background-color: #333;
-  height: 100%;
-  min-height: 100vh;
-}
-
-.scrollbox__inner {
-  display: flex;
-  height: 100%;
-  opacity: 0;
-  padding: 5%;
-  position: relative;
-  transform: translate(-200%, 0);
-  transition: all ease 500ms;
-  width: 100%;
-}
-
 .scrollin {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.scrollbox1 {
-  background-color: #ddd;
-}
-
-.scrollbox2 {
-  background-color: #eee;
-}
-
-.scrollbox3 {
-  background-color: #ccc;
-}
-
-.scrollbox4 {
-  background-color: #bbb;
-}
-
-.scrollbox5 {
-  background-color: #aaa;
-}
-
-.scrollbox6 {
-  background-color: #333;
-}
-
 .show {
   transform: translateX(100%);
 }
-
 @media screen and (max-width:812px) {
   .sp-hide {
     display: none;
   }
+
   .sp-show {
     display: inline;
   }
+
   #index {
     padding: 0 10px;
+    width: 100%;
+
     &__body {
       width: 100%;
     }
+
     #enter-btn {
       font-size: 20px;
       margin-top: 30px;
@@ -264,34 +280,48 @@ header {
       }
       width: auto;
     }
+
     p {
       span {
         font-size: 35px;
       }
     }
+
     #skip {
       top: 20px;
       right: 20px;
     }
   }
-  .parallax-bg {
-    font-size: 30px;
+
+  .content {
+    font-size: 16px;
+    &__inner {
+      padding: {
+        right: 15px;
+        left: 15px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
   }
-  .img-bg-01 {
-    & > .bg-txt {
+
+  #top {
+    & > h1 {
       font: {
         size: 60px;
       }
       line-height: 1.2;
       width: 90%;
     }
+
     video {
       height: 100%;
       width: auto;
     }
   }
   @media screen and (orientation: landscape) {
-    .img-bg-01 {
+    #top {
       video {
         height: auto;
         width: 100%;
@@ -299,9 +329,8 @@ header {
     }
   }
 }
-
 @media screen and (max-width:1024px) and (orientation: portrait) {
-  .img-bg-01 {
+  #top {
     video {
       height: 100%;
       width: auto;

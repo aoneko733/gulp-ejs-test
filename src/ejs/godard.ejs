@@ -75,21 +75,29 @@
           </li>
         </ul>
       </header>
-      <% for (var i in godardData) { %>
-      <div class="parallax-bg parallax-bg<%= godardData[i].bgClassName %>" id="top">
-        <p class="bg-txt">
-          <%= godardData[i].bgTxt %>
-        </p>
-        <% if(godardData[i].movie) { %>
-        <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
+      <div id="contents">
+        <div class="content" id="top">
+          <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
+          <h1>
+            L'univers de Jean-Luc Godard
+          </h1>
+        </div>
+        <% for (var i in godardData) { %>
+        <div class="content" id="<%= godardData[i].contsId %>">
+          <div class="content__inner">
+            <h2>
+              <span>
+                <%= godardData[i].articleTitle %>
+              </span>
+            </h2>
+            <article>
+              <%= godardData[i].contsTxt %>
+            </article>
+            <div class="content__inner-bg"></div>
+          </div>
+        </div>
         <% } %>
       </div>
-      <div class="scrollbox" id="<%= godardData[i].contsId %>">
-        <div class="scrollbox__inner<%= godardData[i].contsClassName %>">
-          <%= godardData[i].contsTxt %>
-        </div>
-      </div>
-      <% } %>
     </main>
   </div>
   <script src="../js/godard.min.js" charset="utf-8"></script>
