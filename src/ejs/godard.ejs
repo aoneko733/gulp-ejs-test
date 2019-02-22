@@ -78,22 +78,21 @@
       <div id="contents">
         <div class="content" id="top">
           <video src="../img/movie1.mp4" poster="" autoplay loop muted></video>
-          <h1>
-            L'univers de Jean-Luc Godard
-          </h1>
+          <h1>L'univers de Jean-Luc Godard</h1>
         </div>
         <% for (var i in godardData) { %>
         <div class="content" id="<%= godardData[i].contsId %>">
           <div class="content__inner">
-            <h2>
-              <span>
-                <%= godardData[i].articleTitle %>
-              </span>
-            </h2>
             <article>
-              <%= godardData[i].contsTxt %>
+              <h2>
+                <span>
+                  <%= godardData[i].articleTitle %>
+                </span>
+              </h2>
+              <div class="article__txt">
+                <%- godardData[i].contsTxt %>
+              </div>
             </article>
-            <div class="content__inner-bg"></div>
           </div>
         </div>
         <% } %>
