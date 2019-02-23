@@ -33,7 +33,7 @@ gulp.task("ejs", function() {
   var json = JSON.parse(fs.readFileSync('./src/data/samples.json'));
   return gulp.src('./src/ejs/*.ejs')
     .pipe(ejs(json,{},{"ext": ".html"}))
-    .pipe(gulp.dest('dest/html/'));
+    .pipe(gulp.dest('dest/'));
 });
 
 gulp.task('minify', function() {

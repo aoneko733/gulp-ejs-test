@@ -9,6 +9,7 @@
 
 body,
 html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "メイリオ", Meiryo, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, sans-serif;
   height: 100%;
   margin: 0 auto;
   letter-spacing: 2px;
@@ -184,7 +185,7 @@ header {
 .content {
   background: {
     attachment: fixed;
-    position: center;
+    position: center center;
     size: cover;
     repeat: no-repeat;
   }
@@ -259,6 +260,7 @@ header {
 .show {
   transform: translateX(100%);
 }
+
 @media screen and (max-width:812px) {
   .sp-hide {
     display: none;

@@ -2,6 +2,7 @@
 @import url("./reset.css");
 body,
 html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "メイリオ", Meiryo, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, sans-serif;
   height: 100%;
   margin: 0 auto;
   letter-spacing: 2px;
@@ -179,7 +180,7 @@ header ul li > a {
 /* content */
 .content {
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;

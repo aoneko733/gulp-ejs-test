@@ -17,14 +17,15 @@ $(function() {
   });
   /*スクロール時コンテンツの横スライド*/
   $(window).on('scroll', function() {
-    $('.content__inner').each(function() {
+    $('.content').each(function() {
       var obj_t_pos = $(this).offset().top;
       var scr_count = $(document).scrollTop();
-      if (scr_count >= obj_t_pos - 250) {
-        $(this).addClass('scrollin');
+
+      if (scr_count >= obj_t_pos - 100) {
+        $(this).children('.content__inner').addClass('scrollin');
         $(this).find('h2 span').addClass('show');
       } else {
-        $(this).removeClass('scrollin');
+        $(this).children('.content__inner').removeClass('scrollin');
         $(this).find('h2 span').removeClass('show');
       }
     });
