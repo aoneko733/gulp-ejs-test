@@ -18,15 +18,18 @@ $(function() {
   /*スクロール時コンテンツの横スライド*/
   $(window).on('scroll', function() {
     $('.content').each(function() {
-      var obj_t_pos = $(this).offset().top;
-      var scr_count = $(document).scrollTop();
+      var obj_t_pos = $(this).offset().top,
+      scr_count = $(document).scrollTop(),
+      thisInner = $(this).children('.content__inner'),
+      thisH2 = $(this).find('h2 span'),
+      showPoint = $(this).height() / 3;
 
-      if (scr_count >= obj_t_pos - 100) {
-        $(this).children('.content__inner').addClass('scrollin');
-        $(this).find('h2 span').addClass('show');
+      if (scr_count >= obj_t_pos - showPoint) {
+        thisInner.addClass('scrollin');
+        thisH2.addClass('show');
       } else {
-        $(this).children('.content__inner').removeClass('scrollin');
-        $(this).find('h2 span').removeClass('show');
+        thisInner.removeClass('scrollin');
+        thisH2.removeClass('show');
       }
     });
   });
