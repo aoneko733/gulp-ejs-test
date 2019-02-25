@@ -1,3 +1,4 @@
+<% var data = godardData; %>
 <% include common/_heading %>
 <title>L'univers de Jean-Luc Godard</title>
 <link rel="stylesheet" href="./css/godard.css">
@@ -13,7 +14,6 @@
   });
 </script>
 </head>
-
 <body>
   <div id="loading">
     <div class="loader">Loading...</div>
@@ -83,28 +83,7 @@
           </li>
         </ul>
       </header>
-      <div id="contents">
-        <div class="content" id="top">
-          <video src="./img/movie1.mp4" poster="" autoplay loop muted></video>
-          <h1>L'univers de Jean-Luc Godard</h1>
-        </div>
-        <% for (var i in godardData) { %>
-        <div class="content" id="<%= godardData[i].contsId %>">
-          <div class="content__inner">
-            <article>
-              <h2>
-                <span>
-                  <%= godardData[i].articleTitle %>
-                </span>
-              </h2>
-              <div class="article__txt">
-                <%- godardData[i].contsTxt %>
-              </div>
-            </article>
-          </div>
-        </div>
-        <% } %>
-      </div>
+      <% include template/_content %>
     </main>
   </div>
   <script src="./js/godard.min.js" charset="utf-8"></script>
