@@ -1,0 +1,22 @@
+<div id="contents">
+  <div class="content" id="top">
+    <video src="./img/movie1.mp4" poster="" autoplay loop muted></video>
+    <h1>L'univers de Jean-Luc Godard</h1>
+  </div>
+  <% for (var i in data) { %>
+  <div class="content" id="<%= data[i].contsId %>">
+    <div class="content__inner">
+      <article>
+        <h2>
+          <span>
+            <%= data[i].articleTitle %>
+          </span>
+        </h2>
+        <div class="article__txt">
+          <%- data[i].contsTxt %>
+        </div>
+      </article>
+    </div>
+  </div>
+  <% } %>
+</div>
