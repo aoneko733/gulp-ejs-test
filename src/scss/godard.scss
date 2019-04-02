@@ -1,17 +1,17 @@
 @import url("./reset.css");
 @mixin clearfix {
   &:after {
-    content: "";
     display: block;
     clear: both;
+    content: "";
   }
 }
 
 body,
 html {
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "メイリオ", Meiryo, "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, sans-serif;
   height: 100%;
-  margin: 0 auto;
   letter-spacing: 2px;
 }
 
@@ -39,7 +39,6 @@ body {
   height: 100%;
 }
 /*初期画面*/
-
 #index {
   background-color: #000;
   display: table;
@@ -116,8 +115,9 @@ body {
   }
 }
 /* コンテンツ */
-#main,
-#contents {
+
+#contents,
+#main {
   height: 100%;
 }
 
@@ -151,7 +151,6 @@ header {
   }
 }
 /*top*/
-
 #top {
   h1 {
     color: #fff;
@@ -181,7 +180,6 @@ header {
   }
 }
 /* content */
-
 .content {
   background: {
     attachment: fixed;
@@ -191,6 +189,7 @@ header {
   }
   height: 100%;
   min-height: 100vh;
+
   &__inner {
     background: linear-gradient(-225deg, rgba(255, 187, 0, 0.2) 10%, rgba(255, 83, 76,0.3) 80%);
     background: rgba(0,0,0,0.3);
@@ -202,9 +201,11 @@ header {
     transform: translate(-200%, 0);
     transition: all ease 500ms;
     width: 100%;
+
     article {
       margin: 0 auto;
       max-width: 900px;
+
       h2 {
         border-bottom: 1px solid #fff;
         padding-bottom: 10px;
@@ -213,6 +214,7 @@ header {
           weight: bold;
         }
         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
         span {
           display: block;
           padding-left: 10px;
@@ -221,6 +223,7 @@ header {
           transition: all ease 1000ms;
         }
       }
+
       .article__txt {
         background: rgba(255,255,255,0.4);
         color: #222;
@@ -252,6 +255,7 @@ header {
   background-image: url("../img/photo5.jpg");
 }
 /*スクロールするコンテンツ*/
+
 .scrollin {
   opacity: 1;
   transform: translate(0, 0);
@@ -260,7 +264,6 @@ header {
 .show {
   transform: translateX(100%);
 }
-
 @media screen and (max-width:812px) {
   .sp-hide {
     display: none;
@@ -302,11 +305,13 @@ header {
 
   .content {
     font-size: 16px;
+
     &__inner {
       padding: {
         right: 15px;
         left: 15px;
       }
+
       article {
         h2 {
           font-size: 26px;
